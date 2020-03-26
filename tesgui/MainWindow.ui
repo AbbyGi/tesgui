@@ -6,21 +6,45 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>730</width>
+    <height>628</height>
    </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>700</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>700</width>
+     <height>600</height>
+    </size>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
-         <widget class="PyDMEmbeddedDisplay" name="embeddedMotors" native="true">
+         <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -35,6 +59,17 @@
           </property>
           <property name="toolTip">
            <string/>
+          </property>
+          <property name="whatsThis">
+           <string>
+    A QFrame capable of rendering a PyDM Display
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+
+    </string>
           </property>
           <property name="filename" stdset="0">
            <string>motors.ui</string>
@@ -42,7 +77,7 @@
          </widget>
         </item>
         <item>
-         <widget class="PyDMEmbeddedDisplay" name="embeddedDEParams" native="true">
+         <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_2">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -57,6 +92,17 @@
           </property>
           <property name="toolTip">
            <string/>
+          </property>
+          <property name="whatsThis">
+           <string>
+    A QFrame capable of rendering a PyDM Display
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+
+    </string>
           </property>
           <property name="filename" stdset="0">
            <string>de_params.ui</string>
@@ -68,7 +114,7 @@
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
-         <widget class="PyDMEmbeddedDisplay" name="embeddedDetParams" native="true">
+         <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_3">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -83,6 +129,17 @@
           </property>
           <property name="toolTip">
            <string/>
+          </property>
+          <property name="whatsThis">
+           <string>
+    A QFrame capable of rendering a PyDM Display
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+
+    </string>
           </property>
           <property name="filename" stdset="0">
            <string>det_params.ui</string>
@@ -90,7 +147,7 @@
          </widget>
         </item>
         <item>
-         <widget class="PyDMEmbeddedDisplay" name="embeddedExe" native="true">
+         <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_4">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -105,6 +162,17 @@
           </property>
           <property name="toolTip">
            <string/>
+          </property>
+          <property name="whatsThis">
+           <string>
+    A QFrame capable of rendering a PyDM Display
+
+    Parameters
+    ----------
+    parent : QWidget
+        The parent widget for the Label
+
+    </string>
           </property>
           <property name="filename" stdset="0">
            <string>execution.ui</string>
@@ -121,8 +189,8 @@
  <customwidgets>
   <customwidget>
    <class>PyDMEmbeddedDisplay</class>
-   <extends>QWidget</extends>
-   <header>pydmembeddeddisplay.h</header>
+   <extends>QFrame</extends>
+   <header>pydm.widgets.embedded_display</header>
   </customwidget>
  </customwidgets>
  <resources/>
