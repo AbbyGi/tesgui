@@ -18,3 +18,15 @@ Features
 --------
 
 * TODO
+
+Installation
+------------
+- Create a conda environment
+
+.. code:: bash
+
+  git clone https://github.com/AbbyGi/tesgui
+  cd tesgui/
+  conda create -n tesgui python=3.7
+  conda activate tesgui
+  pip install -e .

@@ -2,9 +2,9 @@ import os
 import sys
 import json
 from pydm import Display
-from qtpy.QtWidgets import (QVBoxLayout, QHBoxLayout, QGroupBox,
-    QLabel, QLineEdit, QPushButton, QScrollArea, QFrame,
-    QApplication, QWidget)
+# from qtpy.QtWidgets import (QVBoxLayout, QHBoxLayout, QGroupBox,
+#     QLabel, QLineEdit, QPushButton, QScrollArea, QFrame,
+#     QApplication, QWidget)
 
 from pydm.widgets import PyDMEmbeddedDisplay
 
