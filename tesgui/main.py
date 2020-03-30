@@ -4,25 +4,47 @@ import json
 
 from pydm.widgets import PyDMEmbeddedDisplay
 
-from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton)
+from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QMainWindow)
 from PyQt5 import uic
 
 import time
 from os import path
 from pydm import Display
 
+LOCAL_PATH = path.dirname(path.realpath(__file__))
+print(LOCAL_PATH)
+print(path.join(LOCAL_PATH, 'motor_params.py'))
+
 
 class MainScreen(Display):
     def __init__(self, parent=None, args=None):
         super(MainScreen, self).__init__(parent=parent, args=args)
-        self.ui.PyDMEmbeddedDisplay.filename = 'motor_params.py'
-        # # Attach our custom process_image method
-        # self.ui.imageView.process_image = self.process_image
-        # # Hook up to the newImageSignal so we can update
-        # # our widgets after the new image is done
-        # self.ui.imageView.newImageSignal.connect(self.show_blob)
-        # # Store blob coordinate
-        # self.blob = (0, 0)
+        # super(MainScreen, self).__init__(parent=parent)
+        self.ui_file = self.ui_filepath()
+
+        if os.path.exists(path.join(LOCAL_PATH, 'motor_params.py')):
+            print(self.ui.embedded_motors.filename)
+            self.ui.embedded_motors.filename = path.join(LOCAL_PATH, 'motor_params.py')
+            print(self.ui.embedded_motors.filename)
+        else:
+            print("can't find motors file")
+        if os.path.exists(path.join(LOCAL_PATH, 'de_params.ui')):
+            print(self.ui.embedded_de_params.filename)
+            self.ui.embedded_de_params.filename = path.join(LOCAL_PATH, 'de_params.ui')
+        else:
+            print("can't find de_params file")
+        if os.path.exists(path.join(LOCAL_PATH, 'det_params.ui')):
+            print(self.ui.embedded_det_params.filename)
+            self.ui.embedded_det_params.filename = path.join(LOCAL_PATH, 'det_params.ui')
+        else:
+            print("can't find det_params file")
+        if os.path.exists(path.join(LOCAL_PATH, 'execution.ui')):
+            print(self.ui.embedded_exe.filename)
+            self.ui.embedded_exe.filename = path.join(LOCAL_PATH, 'execution.ui')
+        else:
+            print("can't find execution file")
+        uic.loadUi(self.ui_filepath(), self)
+        self.show()
 
     def ui_filename(self):
         # Point to our UI file
@@ -30,4 +52,15 @@ class MainScreen(Display):
 
     def ui_filepath(self):
         # Return the full path to the UI file
-        return path.join(path.dirname(path.realpath(__file__)), self.ui_filename())
+        if os.path.exists(path.join(LOCAL_PATH, self.ui_filename())):
+            print(path.join(LOCAL_PATH, self.ui_filename()))
+            return path.join(LOCAL_PATH, self.ui_filename())
+        else:
+            print('bad')
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    myapp = MainScreen()
+    myapp.show()
+    sys.exit(app.exec_())

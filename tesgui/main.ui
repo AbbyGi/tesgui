@@ -40,7 +40,7 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay">
+        <widget class="PyDMEmbeddedDisplay" name="embedded_motors">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -76,7 +76,7 @@
         </widget>
        </item>
        <item>
-        <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_2">
+        <widget class="PyDMEmbeddedDisplay" name="embedded_de_params">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -107,7 +107,7 @@
           <enum>QFrame::Box</enum>
          </property>
          <property name="filename" stdset="0">
-          <string>de_params.ui</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -116,7 +116,7 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_3">
+        <widget class="PyDMEmbeddedDisplay" name="embedded_det_params">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -147,12 +147,12 @@
           <enum>QFrame::Box</enum>
          </property>
          <property name="filename" stdset="0">
-          <string>det_params.ui</string>
+          <string/>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="PyDMEmbeddedDisplay" name="PyDMEmbeddedDisplay_4">
+        <widget class="PyDMEmbeddedDisplay" name="embedded_exe">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -183,7 +183,7 @@
           <enum>QFrame::Box</enum>
          </property>
          <property name="filename" stdset="0">
-          <string>execution.ui</string>
+          <string/>
          </property>
         </widget>
        </item>
