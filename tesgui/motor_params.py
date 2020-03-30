@@ -1,10 +1,13 @@
 import json
+import os
 from pydm import Display
 from qtpy.QtWidgets import (QVBoxLayout, QHBoxLayout, QGroupBox,
                             QLabel, QLineEdit, QPushButton, QScrollArea, QFrame,
                             QApplication, QWidget)
 from qtpy import QtCore
 from pydm.widgets import PyDMEmbeddedDisplay
+
+LOCAL_PATH = path.dirname(path.realpath(__file__))
 
 
 class AllMotors(Display):
@@ -60,7 +63,8 @@ class AllMotors(Display):
         for m in self.motors:
             disp = PyDMEmbeddedDisplay(parent=self)
             disp.macros = json.dumps({"MOTOR": m})
-            disp.filename = 'motors.ui'
+            if os.path.exists(os.path.join(LOCAL_PATH, 'motors.ui')):
+                disp.filename = os.path.join(LOCAL_PATH, 'motors.ui')
             disp.setMinimumWidth(300)
             disp.setMinimumHeight(24)
             disp.setMaximumHeight(30)
