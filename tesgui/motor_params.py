@@ -29,7 +29,6 @@ class AllMotors(Display):
         lbl_title.setStyleSheet("\
                     QLabel {\
                         qproperty-alignment: AlignCenter;\
-                        padding: 5px 0px;\
                         max-height: 25px;\
                         font-size: 14px;\
                     }")
@@ -63,7 +62,7 @@ class AllMotors(Display):
             disp.macros = json.dumps({"MOTOR": m})
             disp.filename = 'motors.ui'
             disp.setMinimumWidth(300)
-            disp.setMinimumHeight(20)
+            disp.setMinimumHeight(24)
             disp.setMaximumHeight(30)
             # Add the Embedded Display to the Results Layout
             self.results_layout.addWidget(disp)

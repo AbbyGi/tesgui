@@ -12,14 +12,29 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>700</width>
-    <height>600</height>
+    <width>708</width>
+    <height>608</height>
    </size>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
+   <property name="spacing">
+    <number>2</number>
+   </property>
+   <property name="leftMargin">
+    <number>2</number>
+   </property>
+   <property name="topMargin">
+    <number>2</number>
+   </property>
+   <property name="rightMargin">
+    <number>2</number>
+   </property>
+   <property name="bottomMargin">
+    <number>2</number>
+   </property>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
@@ -51,6 +66,9 @@
         The parent widget for the Label
 
     </string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
          </property>
          <property name="filename" stdset="0">
           <string/>
@@ -84,6 +102,9 @@
         The parent widget for the Label
 
     </string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
          </property>
          <property name="filename" stdset="0">
           <string>de_params.ui</string>
@@ -122,6 +143,9 @@
 
     </string>
          </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
          <property name="filename" stdset="0">
           <string>det_params.ui</string>
          </property>
@@ -155,6 +179,9 @@
 
     </string>
          </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
          <property name="filename" stdset="0">
           <string>execution.ui</string>
          </property>
@@ -171,6 +198,7 @@
    <class>PyDMEmbeddedDisplay</class>
    <extends>QFrame</extends>
    <header>pydm.widgets.embedded_display</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>

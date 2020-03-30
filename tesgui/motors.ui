@@ -6,13 +6,13 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>290</width>
     <height>38</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>400</width>
+    <width>250</width>
     <height>32</height>
    </size>
   </property>
@@ -64,15 +64,15 @@
      <item row="0" column="3">
       <widget class="QLineEdit" name="initPos">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>60</width>
-         <height>0</height>
+         <width>45</width>
+         <height>24</height>
         </size>
        </property>
       </widget>
@@ -80,15 +80,15 @@
      <item row="0" column="2">
       <widget class="QLineEdit" name="hiBound">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>60</width>
-         <height>0</height>
+         <width>45</width>
+         <height>24</height>
         </size>
        </property>
       </widget>
@@ -96,15 +96,15 @@
      <item row="0" column="4">
       <widget class="QLineEdit" name="bestPos">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>60</width>
-         <height>0</height>
+         <width>45</width>
+         <height>24</height>
         </size>
        </property>
       </widget>
@@ -112,15 +112,15 @@
      <item row="0" column="1">
       <widget class="QLineEdit" name="lowBound">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>60</width>
-         <height>0</height>
+         <width>45</width>
+         <height>24</height>
         </size>
        </property>
       </widget>
@@ -128,15 +128,15 @@
      <item row="0" column="0">
       <widget class="QLabel" name="motor_name">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
        <property name="minimumSize">
         <size>
-         <width>75</width>
-         <height>20</height>
+         <width>80</width>
+         <height>24</height>
         </size>
        </property>
        <property name="maximumSize">
