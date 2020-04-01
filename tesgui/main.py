@@ -8,12 +8,11 @@ from PyQt5.QtWidgets import (QApplication, QWidget, QPushButton, QMainWindow)
 from PyQt5 import uic
 
 import time
-from os import path
 from pydm import Display
 
-LOCAL_PATH = path.dirname(path.realpath(__file__))
+LOCAL_PATH = os.path.dirname(os.path.realpath(__file__))
 print(LOCAL_PATH)
-print(path.join(LOCAL_PATH, 'motor_params.py'))
+print(os.path.join(LOCAL_PATH, 'motor_params.py'))
 
 
 class MainScreen(Display):
@@ -22,25 +21,25 @@ class MainScreen(Display):
         # super(MainScreen, self).__init__(parent=parent)
         self.ui_file = self.ui_filepath()
 
-        if os.path.exists(path.join(LOCAL_PATH, 'motor_params.py')):
+        if os.path.exists(os.path.join(LOCAL_PATH, 'motor_params.py')):
             print(self.ui.embedded_motors.filename)
-            self.ui.embedded_motors.filename = path.join(LOCAL_PATH, 'motor_params.py')
+            self.ui.embedded_motors.filename = os.path.join(LOCAL_PATH, 'motor_params.py')
             print(self.ui.embedded_motors.filename)
         else:
             print("can't find motors file")
-        if os.path.exists(path.join(LOCAL_PATH, 'de_params.ui')):
+        if os.path.exists(os.path.join(LOCAL_PATH, 'de_params.ui')):
             print(self.ui.embedded_de_params.filename)
-            self.ui.embedded_de_params.filename = path.join(LOCAL_PATH, 'de_params.ui')
+            self.ui.embedded_de_params.filename = os.path.join(LOCAL_PATH, 'de_params.ui')
         else:
             print("can't find de_params file")
-        if os.path.exists(path.join(LOCAL_PATH, 'det_params.ui')):
+        if os.path.exists(os.path.join(LOCAL_PATH, 'det_params.ui')):
             print(self.ui.embedded_det_params.filename)
-            self.ui.embedded_det_params.filename = path.join(LOCAL_PATH, 'det_params.ui')
+            self.ui.embedded_det_params.filename = os.path.join(LOCAL_PATH, 'det_params.ui')
         else:
             print("can't find det_params file")
-        if os.path.exists(path.join(LOCAL_PATH, 'execution.ui')):
+        if os.path.exists(os.path.join(LOCAL_PATH, 'execution.ui')):
             print(self.ui.embedded_exe.filename)
-            self.ui.embedded_exe.filename = path.join(LOCAL_PATH, 'execution.ui')
+            self.ui.embedded_exe.filename = os.path.join(LOCAL_PATH, 'execution.ui')
         else:
             print("can't find execution file")
         uic.loadUi(self.ui_filepath(), self)
@@ -52,9 +51,9 @@ class MainScreen(Display):
 
     def ui_filepath(self):
         # Return the full path to the UI file
-        if os.path.exists(path.join(LOCAL_PATH, self.ui_filename())):
-            print(path.join(LOCAL_PATH, self.ui_filename()))
-            return path.join(LOCAL_PATH, self.ui_filename())
+        if os.path.exists(os.path.join(LOCAL_PATH, self.ui_filename())):
+            print(os.path.join(LOCAL_PATH, self.ui_filename()))
+            return os.path.join(LOCAL_PATH, self.ui_filename())
         else:
             print('bad')
 

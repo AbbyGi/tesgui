@@ -7,7 +7,7 @@ from qtpy.QtWidgets import (QVBoxLayout, QHBoxLayout, QGroupBox,
 from qtpy import QtCore
 from pydm.widgets import PyDMEmbeddedDisplay
 
-LOCAL_PATH = path.dirname(path.realpath(__file__))
+LOCAL_PATH = os.path.dirname(os.path.realpath(__file__))
 
 
 class AllMotors(Display):
